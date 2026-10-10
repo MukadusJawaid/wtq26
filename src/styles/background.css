@@ -1,0 +1,14 @@
+/* Wattwise design system: background */
+/* ===== background ===== */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.bg i{position:absolute;border-radius:50%;filter:blur(90px);animation:drift 24s ease-in-out infinite alternate}
+.bg .a{width:680px;height:680px;left:-200px;top:-180px;background:var(--b1);opacity:.55}
+.bg .b{width:520px;height:520px;right:-160px;top:16%;background:var(--b2);opacity:.34;animation-delay:-9s}
+.bg .c{width:640px;height:640px;left:28%;bottom:-300px;background:var(--b3);opacity:.45;animation-delay:-15s}
+[data-theme=dark] .bg .b{opacity:.14}[data-theme=dark] .bg .a{opacity:.5}
+@keyframes drift{to{transform:translate(70px,50px) scale(1.12)}}
+.bg::after{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--dot) 1.3px,transparent 1.4px);background-size:28px 28px;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 25%,#000 20%,transparent 78%);mask-image:radial-gradient(ellipse 80% 70% at 50% 25%,#000 20%,transparent 78%)}
+.bg .fl{position:absolute;color:var(--forest);opacity:.12;animation:floaty 14s ease-in-out infinite}
+[data-theme=dark] .bg .fl{color:var(--volt);opacity:.12}
+.bg .f1{left:6%;top:62%}.bg .f2{right:8%;top:8%;animation-duration:17s;animation-delay:-4s}.bg .f3{left:44%;top:84%;animation-duration:19s;animation-delay:-8s}.bg .f4{right:20%;top:56%;animation-duration:16s;animation-delay:-2s}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-34px) rotate(10deg)}}

@@ -1,0 +1,34 @@
+/* Wattwise design system: responsive */
+@media (max-width:1000px){
+  .hero-card{grid-column:span 12;min-height:0}
+  .drop{grid-column:span 12;grid-row:auto;min-height:340px}
+  .tile{grid-column:span 6}
+  .how{grid-column:span 12}
+  .split,.qa,.duo{grid-template-columns:1fr}
+  .doc{position:static}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stages{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px){
+  .wrap{padding-inline:14px}
+  main{padding-block:20px 60px}
+  .bar{border-radius:28px}
+  .live{display:none}
+  .hr{margin-inline-start:auto}
+  nav.steps{order:3;width:100%}
+  .tab{padding-inline:8px 12px}.tab span{display:none}.tab[aria-selected=true] span{display:inline}
+  .tile{grid-column:span 12}
+  .files{grid-template-columns:1fr}
+  .mini .r{grid-template-columns:100px 1fr auto}
+  .ask{flex-direction:column}
+  .dl2{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Phones: stack the hero buttons full width so "Upload your bill" never wraps. */
+.btn{white-space:nowrap}
+@media (max-width:576px){
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{flex:none;width:100%}
+}

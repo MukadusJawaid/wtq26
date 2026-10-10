@@ -1,0 +1,40 @@
+/*
+ * Colour tokens: the single source of truth for every colour in the app.
+ * Components only ever use var(--token); nothing else defines colours.
+ * Light is the default; [data-theme=dark] overrides the same names.
+ */
+:root{
+  /* surfaces */
+  --bg:#EFECE4; --surface:#FFFFFF; --cream:#F8F6F0; --border:#E2DED2; --border-2:#CFCABB;
+  /* text */
+  --ink:#14171A; --body:#3B4140; --muted:#6B716E;
+  /* brand */
+  --forest:#0F3D2E; --forest-2:#17553F; --volt:#F6B93B; --volt-d:#E5A21E;
+  --pri:#0F3D2E; --pri-d:#0A2B20; --pri-t:#E3EFE8; --pri-b:#B9D5C6;
+  /* status */
+  --ok:#166534; --ok-t:#DDF3E3; --ok-b:#9AD3AB;
+  --bad:#B42318; --bad-t:#FDE3DD; --bad-b:#F4AFA2;
+  --warn:#8A5A06; --warn-t:#FFF1B8; --warn-b:#EBCF63;
+  /* tints */
+  --mint:#DCEFE2; --butter:#FCEBC8;
+  /* backdrop blobs, dot grid, mobile dock */
+  --b1:#8FD8B5; --b2:#FFD68A; --b3:#FFC4A3; --dot:rgba(15,61,46,.2); --dock:rgba(255,255,255,.9);
+  /* elevation */
+  --shadow:0 1px 0 rgba(20,23,26,.03),0 18px 30px -24px rgba(20,23,26,.28);
+  /* frosted header */
+  --glass:color-mix(in srgb,var(--surface) 88%,transparent);
+}
+
+[data-theme=dark]{
+  color-scheme:dark;
+  --bg:#0A0E0C; --surface:#131916; --cream:#1A211D; --border:#25302A; --border-2:#34413A;
+  --ink:#F1F5F0; --body:#B6C0BA; --muted:#85918A;
+  --forest:#134A38;
+  --pri-t:#16281F; --pri-b:#2B4A3B;
+  --ok:#8BE6A6; --ok-t:#12301F; --ok-b:#245C38;
+  --bad:#FF9E8E; --bad-t:#3A1612; --bad-b:#7A2C20;
+  --warn:#F2D66B; --warn-t:#2F2808; --warn-b:#6B5A14;
+  --mint:#12261D; --butter:#2E2512;
+  --b1:#0F6B4E; --b2:#F6B93B; --b3:#0E4F3B; --dot:rgba(246,185,59,.2); --dock:rgba(19,25,22,.92);
+  --shadow:0 1px 0 rgba(255,255,255,.03),0 18px 30px -24px rgba(0,0,0,.8);
+}

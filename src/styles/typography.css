@@ -1,0 +1,21 @@
+/*
+ * Type scale. Font families come from src/lib/typography.ts (next/font),
+ * sizes and rhythm live here so headings stay consistent across the app.
+ */
+:root{
+  --fs-xs:12.5px;
+  --fs-sm:14px;
+  --fs-md:16px;
+  --fs-lg:18px;
+  --fs-h3:18px;
+  --fs-h2:clamp(26px,3.2vw,40px);
+  --fs-h1:clamp(32px,4.2vw,54px);
+  --fs-hero:clamp(34px,5vw,68px);
+  --lh-tight:1.08;
+  --track-tight:-.03em;
+}
+h1{font-size:var(--fs-h1);line-height:var(--lh-tight);letter-spacing:var(--track-tight)}
+h2{font-size:var(--fs-h2);line-height:var(--lh-tight);letter-spacing:var(--track-tight)}
+h3{font-size:var(--fs-h3)}
+.hero-card .lead{font-size:var(--fs-lg)}
+.pagehead .sub{font-size:var(--fs-lg)}

@@ -1,0 +1,29 @@
+/* Wattwise design system: home + upload pages */
+/* ===== home vs upload ===== */
+.hero-card.wide{grid-column:span 12;min-height:380px;justify-content:space-between}
+.hero-card.wide h1{font-size:clamp(36px,5.2vw,68px);max-width:calc(100% - 300px)}
+.hero-card.wide .lead{max-width:min(560px,calc(100% - 300px))}
+.hero-card.wide .hero-mascot{width:250px;height:275px;inset-inline-end:64px;top:28px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;position:relative;z-index:2}
+.btn.big{min-height:58px;padding-inline:30px;font-size:17px;box-shadow:0 18px 30px -14px rgba(246,185,59,.7)}
+.btn.volt.big:hover{box-shadow:0 22px 34px -14px rgba(246,185,59,.9)}
+.btn.ghost{color:#fff;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);min-height:58px;padding-inline:26px;font-size:16px}
+.btn.ghost:hover{background:rgba(255,255,255,.2);border-color:#fff;transform:translateY(-2px)}
+.teaser{grid-column:span 4;padding:24px;display:flex;flex-direction:column;gap:6px;align-self:stretch;margin-top:46px;margin-bottom:16px;position:relative;overflow:hidden}
+.teaser::before{content:"";position:absolute;inset-inline-end:-50px;top:-50px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(246,185,59,.45),transparent 70%)}
+.teaser .eyebrow{align-self:flex-start;position:relative}
+.tz-n{font:800 clamp(36px,3.6vw,46px)/1.1 var(--disp);letter-spacing:-.035em;color:var(--ink);margin-top:10px}
+.tz-s{color:var(--muted);font-weight:600;font-size:14px}
+.teaser ul{list-style:none;padding:0;margin:12px 0 14px;display:grid;gap:8px;font-size:15px}
+.teaser li{display:flex;gap:10px;align-items:center}
+.teaser li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:#F6B93B}
+.teaser .btn{margin-top:auto}
+.drop.wide{grid-column:span 8;grid-row:span 2;min-height:440px}
+.tipc{grid-column:span 4;padding:24px}
+.tipc h3{font:800 19px var(--disp);letter-spacing:-.02em}
+.tipc ul{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:11px;font-size:15px}
+.tipc li{display:flex;gap:10px;align-items:flex-start}
+.tipc li svg{flex:none;margin-top:3px;color:#2FBF71}
+.pagehead .sub{color:var(--body);font-size:17px;max-width:560px}
+@media (max-width:1000px){.drop.wide,.teaser,.tipc{grid-column:span 12;grid-row:auto}.teaser{margin-top:0;margin-bottom:0}.hero-card.wide h1,.hero-card.wide .lead{max-width:calc(100% - 210px)}.hero-card.wide .hero-mascot{width:190px;height:209px;inset-inline-end:30px}}
+@media (max-width:700px){.hero-card.wide h1,.hero-card.wide .lead{max-width:none}.hero-cta .btn{flex:1}.tab{font-size:11px}}

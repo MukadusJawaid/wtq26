@@ -1,0 +1,64 @@
+/* Wattwise design system: theme */
+.theme{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:var(--cream);color:var(--ink);transition:.25s var(--ease)}
+.theme:hover{background:var(--volt);color:#14171A;border-color:var(--volt);transform:rotate(12deg)}
+.theme .sun{display:none}
+[data-theme=dark] .theme .sun{display:block}[data-theme=dark] .theme .moon{display:none}
+[data-theme=dark] body{background:var(--bg)}
+[data-theme=dark] :focus-visible{outline-color:var(--volt)}
+[data-theme=dark] .bar{background:rgba(19,25,22,.86);box-shadow:0 14px 30px -20px rgba(0,0,0,.9)}
+[data-theme=dark] .tab[aria-selected=true]{background:#26302A;color:#fff}
+[data-theme=dark] .tab.done b{background:#1E5A43}
+[data-theme=dark] .lang button:hover{background:var(--surface)}
+[data-theme=dark] .lang button[aria-pressed=true]{background:var(--volt);color:#14171A}
+[data-theme=dark] .live{background:#12261D;color:#8BE6A6}
+[data-theme=dark] .btn.pri{background:var(--volt);color:#14171A}
+[data-theme=dark] .btn.pri:hover{background:#FFCB5C;box-shadow:0 14px 26px -14px rgba(246,185,59,.6)}
+[data-theme=dark] .btn.volt{color:#14171A}
+[data-theme=dark] .btn.sec:hover{border-color:var(--volt);background:var(--cream)}
+[data-theme=dark] .hero-card{background:linear-gradient(145deg,#134A38,#0D3326);border:1px solid #1E5A43}
+[data-theme=dark] .banner{background:linear-gradient(145deg,#134A38,#0D3326);border:1px solid #1E5A43}
+[data-theme=dark] .drop:hover,[data-theme=dark] .drop:focus-within{border-color:var(--volt)}
+[data-theme=dark] .drop.over{border-color:var(--volt);background:#2A2110;box-shadow:0 0 0 8px rgba(246,185,59,.18)}
+[data-theme=dark] .drop .ic,[data-theme=dark] .how .n{color:#14171A}
+[data-theme=dark] .tile .ck{background:rgba(255,255,255,.09);color:var(--ink)}
+[data-theme=dark] .tile.t3 .ck{background:var(--cream)}
+[data-theme=dark] .tile.t4{background:#0A0D0C;border-color:var(--border)}
+[data-theme=dark] .tile.t4 .ck{background:var(--volt);color:#14171A}
+[data-theme=dark] .tile:hover{box-shadow:0 22px 34px -22px rgba(0,0,0,.9)}
+[data-theme=dark] .zoom button:hover,[data-theme=dark] .copy:hover{color:#14171A}
+[data-theme=dark] .viewer{background:#fff}
+[data-theme=dark] .viewer img,[data-theme=dark] .thumbwrap img{filter:none}
+[data-theme=dark] .sum{border-color:#5A4318}
+[data-theme=dark] .sum li{color:#F0E2C4}
+[data-theme=dark] .sum li::before{background:var(--volt)}
+[data-theme=dark] .kpi .v{color:var(--ink)}
+[data-theme=dark] details[open] .chev{color:#14171A}
+[data-theme=dark] .row .bar2,[data-theme=dark] .track,[data-theme=dark] .pb{background:#232C27}
+[data-theme=dark] .row .bar2 i,[data-theme=dark] .fill{background:var(--volt)}
+[data-theme=dark] .row code,[data-theme=dark] .badge.pri{color:#BDEBD0}
+[data-theme=dark] .code pre,[data-theme=dark] .log{background:#080B0A}
+[data-theme=dark] .chip:hover{background:var(--surface);border-color:var(--volt)}
+[data-theme=dark] .chip[aria-pressed=true]{background:var(--volt);color:#14171A;border-color:var(--volt)}
+[data-theme=dark] .chip[aria-pressed=true] svg{color:#14171A}
+[data-theme=dark] .ask input{background:var(--cream);color:var(--ink);border-color:var(--border-2)}
+[data-theme=dark] .ask input:focus{border-color:var(--volt);box-shadow:0 0 0 4px rgba(246,185,59,.25)}
+[data-theme=dark] .qb{background:var(--volt);color:#14171A}
+[data-theme=dark] .t{color:#E3E9E5}
+[data-theme=dark] .bars .b i{background:#34413A}
+[data-theme=dark] .bars .b i.hi{background:var(--volt)}
+[data-theme=dark] .bars .line{border-top-color:#FF8A5C}
+[data-theme=dark] .bars .line::after{color:#FF9F78}
+[data-theme=dark] .stat:nth-child(1) .v{color:#14171A}
+[data-theme=dark] .stat:nth-child(1) .l{color:#5A3C00}
+[data-theme=dark] .stat:nth-child(4){background:#0A0D0C;border-color:var(--border)}
+[data-theme=dark] .pb i{background:linear-gradient(90deg,#2F8F68,var(--volt))}
+[data-theme=dark] .stage.run1{border-color:var(--volt)}
+[data-theme=dark] .stage.run1 .ic{border-color:var(--volt);border-top-color:transparent}
+[data-theme=dark] .stage.fin{border-color:#2B6B4F}
+[data-theme=dark] .stage.fin .ic{background:var(--volt);border-color:var(--volt);color:#14171A}
+[data-theme=dark] .note{color:#F2D66B}
+[data-theme=dark] .toast{background:var(--volt);color:#14171A}
+[data-theme=dark] .eyebrow{color:#14171A}
+/* short colour fade while switching theme (flag set briefly by theme-toggle) */
+html[data-fade] *,html[data-fade] *::before,html[data-fade] *::after{transition:background-color .4s ease,color .4s ease,border-color .4s ease,fill .4s ease,stroke .4s ease,box-shadow .4s ease!important}
+@media (prefers-reduced-motion:reduce){html[data-fade] *{transition:none!important}}

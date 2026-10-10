@@ -1,0 +1,40 @@
+/* Wattwise design system: mascot */
+/* ===== mascot ===== */
+.mascot{display:block;width:100%;height:100%;overflow:visible}
+.mascot .st{display:none}
+.mascot[data-s=idle] .st-ok,.mascot[data-s=load] .st-ok,.mascot[data-s=idle] .st-fun,.mascot[data-s=load] .st-fun,.mascot[data-s=load] .st-load,.mascot[data-s=slow] .st-slow,.mascot[data-s=err] .st-err{display:block}
+.m-body{transform-origin:100px 176px;animation:bob 3.2s ease-in-out infinite}
+.m-shadow{transform-origin:100px 206px;animation:shad 3.2s ease-in-out infinite}
+.mascot[data-s=load] .m-body{animation-duration:1.3s}.mascot[data-s=load] .m-shadow{animation-duration:1.3s}
+.mascot[data-s=slow] .m-body{animation:breathe 3.6s ease-in-out infinite}
+.mascot[data-s=err] .m-body{animation:wobble 1.8s ease-in-out infinite}
+.m-bolt{transform-origin:100px 56px;animation:zap 2.4s ease-in-out infinite}
+.mascot[data-s=slow] .m-bolt{animation:none;transform:rotate(34deg)}
+.mascot[data-s=err] .m-bolt{animation:flick 1.2s steps(1) infinite}
+.mascot[data-s=err] .m-bolt path,.mascot[data-s=slow] .m-bolt path{fill:#8C938F;stroke:#5F6663}
+.m-eye{transform-box:fill-box;transform-origin:center;animation:blink 4.2s infinite}
+.m-eye.r{animation-delay:.04s}
+.m-look{animation:none}
+.mascot[data-s=load] .m-look{animation:look 2.4s ease-in-out infinite}
+.m-lens{animation:lens 3.2s ease-in-out infinite}
+.m-sp{transform-box:fill-box;transform-origin:center;animation:tw 2s ease-in-out infinite}
+.m-sp.b{animation-delay:.7s}.m-sp.c{animation-delay:1.3s}
+.m-zz{font:800 20px var(--disp);fill:#F6B93B;opacity:0;animation:zz 3s ease-in-out infinite}
+.m-zz.b{animation-delay:1s;font-size:16px}.m-zz.c{animation-delay:2s;font-size:13px}
+.m-sweat{animation:drip 2.2s ease-in infinite}
+.m-orbit{transform-origin:100px 50px;animation:spin 2.6s linear infinite}
+.m-spark{animation:flick .5s steps(1) infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@keyframes shad{50%{transform:scaleX(.82);opacity:.6}}
+@keyframes breathe{50%{transform:scale(1.025,.975)}}
+@keyframes wobble{0%,100%{transform:rotate(0)}15%{transform:rotate(-4deg)}30%{transform:rotate(4deg)}45%{transform:rotate(-3deg)}60%{transform:rotate(2deg)}75%{transform:rotate(0)}}
+@keyframes flick{0%{opacity:1}50%{opacity:.25}}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+@keyframes look{0%,100%{transform:translateX(0)}30%{transform:translateX(-5px)}70%{transform:translateX(5px)}}
+@keyframes lens{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(-76px,-14px) rotate(-14deg)}}
+@keyframes zz{0%{opacity:0;transform:translate(0,8px)}30%{opacity:1}100%{opacity:0;transform:translate(12px,-26px)}}
+@keyframes drip{0%{opacity:0;transform:translateY(-4px)}30%{opacity:1}100%{opacity:0;transform:translateY(16px)}}
+.hero-mascot{position:absolute;inset-inline-end:34px;top:26px;width:190px;height:209px;z-index:1;pointer-events:none}
+.hero-card h1,.hero-card .lead{max-width:calc(100% - 210px)}
+.mbox{width:200px;height:220px;margin-inline:auto}
+.mbox.sm{width:92px;height:101px;margin:0;flex:none}
