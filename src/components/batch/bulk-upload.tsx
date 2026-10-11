@@ -202,7 +202,15 @@ export function BulkUpload() {
           )}
           {!has && (
             <span className="tpl-ok">
-              <Icon name="check" size={14} strokeWidth={3} /> {bulk.defaultBillCount} bills preselected
+              {bulk.defaultBillCount > 0 ? (
+                <>
+                  <Icon name="check" size={14} strokeWidth={3} /> {bulk.defaultBillCount} bills preselected
+                </>
+              ) : (
+                <span className="tpl-warn-inline">
+                  No bill images found in test/bills. Put the bills (named like KESC_0002.png) in that folder and refresh, or run: npm run generate -- --bills &lt;folder&gt;
+                </span>
+              )}
               <label className="tpl-link">
                 Upload your own
                 <input
