@@ -17,8 +17,8 @@ pulls out every detail, and answers questions about it in plain English.
   `null`, never guessed.
 - **Level 2, Explain:** answers customer questions using only what is on the bill. Every figure is either
   read from the bill or calculated in code, and estimates are labelled.
-- **Wattwise app:** upload a bill and see the result, chat with the bill, or upload many bills plus the supplied
-  question file and download both `level1.csv` and `level2.csv`.
+- **Wattwise app:** upload a bill and see the result, chat with the bill, or run the batch from the command line to
+  produce `level1.csv` and `level2.csv`.
 - **Command line:** fills the two competition CSVs for a whole folder of bills.
 
 ## Why the app is designed this way
@@ -102,12 +102,9 @@ rules from the guide are encoded as tests (`npm test`).
 2. **Extract:** amount to pay, charges and taxes line by line, readings and dates, and whether the lines add up.
 3. **Ask:** a chat about the bill. Answers are tagged _From the bill_, _Calculated_, _Estimate_ or
    _Not on this bill_.
-4. **Batch run:** the competition flow in the browser. The supplied `test/csv/level1.csv` and `level2.csv` are
-   preselected automatically (the 12 questions and the row order). Press **Generate output**: the supplied bills in `test/bills` are read, each bill's questions are answered,
-   then download the new `level1.csv` and `level2.csv`. Optionally upload your own CSVs or bills; they replace the
-   preselected ones (the file name is the bill id, e.g. `KESC_0002.png`).
-   Each bill is read, then its questions are answered by the model; the files are written by a CSV library in the
-   template's row order.
+4. **Batch run (command line):** the competition flow. See "Generate the competition CSVs" below. The browser
+   Batch run tab is switched off in this build (commented out in `src/components/app-shell.tsx` and
+   `layout/step-nav.tsx`); the batch engine itself is unchanged.
 
 ## Deploying (Vercel)
 - Set `MODEL_PROVIDER`, `MODEL_NAME` and `API_KEY` in the Vercel project's environment variables

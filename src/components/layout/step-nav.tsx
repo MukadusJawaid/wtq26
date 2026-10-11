@@ -9,10 +9,10 @@ const TABS: { step: Step; label: string; icon: IconName }[] = [
   { step: STEPS.upload, label: "Upload", icon: "upload" },
   { step: STEPS.extract, label: "Extract", icon: "doc" },
   { step: STEPS.ask, label: "Ask", icon: "chat" },
-  { step: STEPS.batch, label: "Batch run", icon: "layers" },
+  // { step: STEPS.batch, label: "Batch run", icon: "layers" }, // Batch run tab disabled
 ];
 
-/** The five-step tab bar with a sliding highlight (a bottom dock on phones). */
+/** The step tab bar with a sliding highlight (a bottom dock on phones). */
 export function StepNav() {
   const step = useAppStore((s) => s.step);
   const go = useAppStore((s) => s.go);

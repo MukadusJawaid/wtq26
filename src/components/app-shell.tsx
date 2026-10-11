@@ -2,7 +2,7 @@
 
 import { useEffect, type ReactNode } from "react";
 import { AskStep } from "@/components/ask/ask-step";
-import { BatchStep } from "@/components/batch/batch-step";
+// import { BatchStep } from "@/components/batch/batch-step"; // Batch run tab disabled
 import { ExtractStep } from "@/components/extract/extract-step";
 import { HomeStep } from "@/components/home/home-step";
 import { Header } from "@/components/layout/header";
@@ -18,10 +18,10 @@ const PANELS: { step: Step; fit?: boolean; content: ReactNode }[] = [
   { step: STEPS.upload, content: <UploadStep /> },
   { step: STEPS.extract, fit: true, content: <ExtractStep /> },
   { step: STEPS.ask, fit: true, content: <AskStep /> },
-  { step: STEPS.batch, content: <BatchStep /> },
+  // { step: STEPS.batch, content: <BatchStep /> }, // Batch run tab disabled
 ];
 
-/** Top-level client shell: header, the five step panels (all mounted, one visible), and global overlays. */
+/** Top-level client shell: header, the step panels (all mounted, one visible), and global overlays. */
 export function AppShell() {
   const step = useAppStore((s) => s.step);
   const navigated = useAppStore((s) => Object.keys(s.visited).length > 1);
