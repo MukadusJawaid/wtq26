@@ -208,7 +208,8 @@ export function BulkUpload() {
                 </>
               ) : (
                 <span className="tpl-warn-inline">
-                  No bill images found in test/bills. Put the bills (named like KESC_0002.png) in that folder and refresh, or run: npm run generate -- --bills &lt;folder&gt;
+                  No bills found in test/bills. Add the bill images there (named like KESC_0002.png) and refresh, or run{" "}
+                  <code>npm run generate -- --bills {"<folder>"}</code>
                 </span>
               )}
               <label className="tpl-link">

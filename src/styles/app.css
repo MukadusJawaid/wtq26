@@ -261,3 +261,19 @@ button,a,summary,label{-webkit-tap-highlight-color:transparent}
 .tpl-busy small{display:block;font-weight:500;font-size:12px;color:var(--muted)}
 .tpl-mascot{width:76px;flex:none}
 .tpl-mascot .mascot{width:100%;height:auto;display:block}
+
+/* phone: keep the last content clear of the fixed bottom dock (must come after the main padding rules above) */
+@media (max-width:700px){
+  main{padding-bottom:calc(120px + env(safe-area-inset-bottom,0px))}
+}
+/* batch panel: file rows wrap cleanly on narrow screens, commands stay readable */
+.tpl-text{gap:10px}
+.tpl-ok{flex-wrap:wrap;row-gap:2px}
+.tpl-ok .tpl-link{margin-left:0}
+.tpl-warn-inline{display:block;line-height:1.5;overflow-wrap:anywhere}
+.tpl-warn-inline code{display:inline-block;max-width:100%;margin-top:4px;padding:3px 8px;border-radius:8px;background:rgba(0,0,0,.18);font:600 12px var(--mono,ui-monospace,monospace);color:var(--ink);white-space:normal;overflow-wrap:anywhere;font-variant-ligatures:none;letter-spacing:0}
+@media (max-width:700px){
+  .tpl{padding:12px}
+  .tpl-ok{display:flex;flex-wrap:wrap;align-items:flex-start;column-gap:6px}
+  .tpl-ok .tpl-link{flex-basis:100%;padding-inline-start:20px}
+}
