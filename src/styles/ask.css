@@ -35,3 +35,15 @@
 .bars .line::after{content:attr(data-l);position:absolute;right:0;top:-24px;font:700 11px var(--sans);color:#B2410F}
 .months{display:flex;gap:6px;padding:6px 6px 0;font:500 10.5px var(--mono);color:var(--muted);direction:ltr}.months span{flex:1;text-align:center}
 .legend{display:grid;gap:10px;padding:20px 22px;margin-top:14px}
+
+/* suggested-question strip above the message box: phones only (wide screens use the side card) */
+.qstrip{display:none}
+@media (max-width:700px){
+  .pick{display:none}
+  .qstrip{display:flex;gap:8px;margin:0 -18px 12px;padding:2px 18px 6px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .qstrip::-webkit-scrollbar{display:none}
+  .qstrip .chip{flex:none;min-height:40px;padding:6px 14px;gap:8px;border-radius:999px;font-size:13.5px;white-space:nowrap;scroll-snap-align:start}
+  .qstrip .chip:hover{transform:none}
+  .qstrip .chip svg{width:16px;height:16px}
+  .composer .ask{margin-top:0}
+}

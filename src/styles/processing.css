@@ -46,3 +46,10 @@ body.lock{overflow:hidden}
 [data-theme=dark] .toast.err{background:#FF9E8E;color:#3A0F08}
 [data-theme=dark] .typing i{background:var(--volt)}
 @media (max-width:700px){.hero-mascot{display:none}.hero-card h1,.hero-card .lead{max-width:none}.proc-card{padding:22px 18px;border-radius:28px}.inerr,.berr{flex-direction:column;text-align:center}}
+
+/* smaller typing dots on phones */
+@media (max-width:576px){
+  .typing{gap:5px;padding:11px 14px;border-radius:18px 18px 18px 5px}
+  .typing i{width:7px;height:7px}
+  @keyframes hop{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+}

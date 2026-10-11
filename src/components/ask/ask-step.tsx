@@ -18,7 +18,7 @@ function Conversation({ analysis }: { analysis: Analysis }) {
       <div className="pane-scroll">
         <QuestionPicker asked={asked} disabled={busy} onAsk={ask} />
       </div>
-      <ChatPanel thread={thread} busy={busy} analysis={analysis} onAsk={ask} onRetry={retry} onClear={clear} />
+      <ChatPanel thread={thread} busy={busy} analysis={analysis} asked={asked} onAsk={ask} onRetry={retry} onClear={clear} />
     </div>
   );
 }

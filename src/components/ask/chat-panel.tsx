@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Mascot } from "@/components/ui/mascot";
 import type { Turn } from "@/hooks/use-ask";
 import type { Analysis } from "@/lib/bill/types";
+import { Icon } from "@/components/ui/icon";
+import { SUGGESTED_QUESTIONS } from "@/lib/bill/questions";
 import { ChatTurn } from "./chat-turn";
 
 /** The conversation: scrolling thread on top, message box pinned to the bottom. */
@@ -13,6 +15,7 @@ export function ChatPanel({
   thread,
   busy,
   analysis,
+  asked,
   onAsk,
   onRetry,
   onClear,
@@ -20,6 +23,8 @@ export function ChatPanel({
   thread: Turn[];
   busy: boolean;
   analysis: Analysis;
+  /** Questions already asked, marked in the strip. */
+  asked: Set<string>;
   onAsk: (question: string) => void;
   onRetry: (id: number) => void;
   onClear: () => void;
@@ -58,6 +63,15 @@ export function ChatPanel({
       </div>
 
       <div className="composer">
+        {/* phones: the suggested questions sit right above the message box (the side card is hidden) */}
+        <div className="qstrip" role="group" aria-label="Suggested questions">
+          {SUGGESTED_QUESTIONS.map(({ text, icon }) => (
+            <button key={text} className="chip" type="button" aria-pressed={asked.has(text)} disabled={busy} onClick={() => onAsk(text)}>
+              <Icon name={icon} />
+              <span>{text}</span>
+            </button>
+          ))}
+        </div>
         <form
           className="ask"
           onSubmit={(e) => {

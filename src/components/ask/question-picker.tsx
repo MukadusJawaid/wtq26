@@ -17,7 +17,7 @@ export function QuestionPicker({
 }) {
   return (
     <>
-      <Card style={{ padding: 24 }}>
+      <Card className="pick" style={{ padding: 24 }}>
         <h3>Try a question</h3>
         <div className="chips">
           {SUGGESTED_QUESTIONS.map(({ text, icon }) => (
