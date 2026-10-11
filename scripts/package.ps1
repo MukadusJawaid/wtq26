@@ -33,7 +33,7 @@ Write-Host "Results OK: level1.csv $($rows1.Count) rows, level2.csv $($rows2.Cou
 # 2. what goes into source/ ---------------------------------------------------------------------
 $exclude = @(
   '^node_modules/', '^\.next/', '^\.git/', '^output/', '^submission/', '^coverage/', '^\.vercel/',
-  '^\.env($|\.)', '\.tsbuildinfo$', '^docs/.*\.pdf$',
+  '^\.env($|\.)', '\.tsbuildinfo$', '^docs/.*\.pdf$', '\.ps1$', '\.excalidraw$', '\.mjs$', '\.png$', '\.svg$', '\.gitkeep$',
   '^test/bills/(?!\.gitkeep)'
 )
 # .env.example is the one env file that must ship

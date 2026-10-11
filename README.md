@@ -25,7 +25,6 @@ pulls out every detail, and answers questions about it in plain English.
 Before writing code I mapped the challenge into two lanes, one per level, because each is scored
 separately and fails in different ways.
 
-![Requirements diagram](docs/requirements-diagram.png)
 
 
 **Level 1 lane (extract).** The bill image goes to the vision model with strict rules (values as printed,
